@@ -39,6 +39,19 @@
             p.Posicao = pos;
         }
 
+        public Peca retirarPeca(Posicao pos)
+        {
+           if(peca(pos) == null)
+            {
+                return null;
+            }
+            //se tiver peça na posição, retirar a peça e retornar a peça retirada
+            Peca aux = peca(pos);
+            aux.Posicao = null; // a peça retirada não tem mais posição no tabuleiro
+            _Pecas[pos.Linha, pos.Coluna] = null; // a posição do tabuleiro fica vazia
+            return aux;
+        }
+
         public bool PosicaoValida(Posicao pos)
         {
            if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna >= Colunas)
