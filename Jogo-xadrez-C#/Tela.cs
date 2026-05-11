@@ -79,7 +79,7 @@ namespace Jogo_xadrez
             ImprimirConjunto(partida.pecasCapturadas(Cor.Branca));
             Console.WriteLine();
             ConsoleColor aux = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("Pretas: ");
             ImprimirConjunto(partida.pecasCapturadas(Cor.Preta));
             Console.ForegroundColor = aux;
@@ -121,7 +121,7 @@ namespace Jogo_xadrez
                 {
                     //se for preta vai imprimir como amarelo a peça e depois voltar para a cinza
                     ConsoleColor aux = Console.ForegroundColor;
-                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write(peca);
                     Console.ForegroundColor = aux;
                 }
